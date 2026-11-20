@@ -19,3 +19,5 @@ results/*_stdout.txt
 slides/node_modules/
 slides/package-lock.json
 .claude/
+slides/video_script.md
+slides/*.pdf

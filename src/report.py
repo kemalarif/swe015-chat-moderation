@@ -65,6 +65,7 @@ def main():
     from . import lexicon
     from .data import load_split
     tq = BertPredictor(quantized=True)
+    bert_params = sum(p.numel() for p in BertPredictor(quantized=False).model.parameters())
     n_q = sum(type(mod).__name__ == "Linear" and "quantized" in type(mod).__module__
               for mod in tq.model.modules())
     import onnx
@@ -73,6 +74,7 @@ def main():
     data = {
         "results": res.to_dict(orient="records"),
         "n_quantized_linear": int(n_q),
+        "bert_params": int(bert_params),
         "onnx_int8_ops": {k: int(v) for k, v in ops.items()
                           if k in ("MatMulInteger", "DynamicQuantizeLinear", "DynamicQuantizeMatMul",
                                    "MatMul", "Gather", "DequantizeLinear")},

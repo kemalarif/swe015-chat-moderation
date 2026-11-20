@@ -122,6 +122,7 @@
     }
   ],
   "n_quantized_linear": 74,
+  "bert_params": 110618882,
   "onnx_int8_ops": {
     "MatMulInteger": 74,
     "DynamicQuantizeLinear": 50,
@@ -395,21 +396,21 @@
       "shown": "iyi oyundu arkadaşlar, bir el daha atalım mı?",
       "p_off": 0.005636502522975206,
       "offensive": false,
-      "ms": 11.861291714012623
+      "ms": 11.015082709491253
     },
     {
       "text": "s1kt1r g1t buradan ezik",
       "shown": "s***** g1t buradan e***",
       "p_off": 0.9878268837928772,
       "offensive": true,
-      "ms": 8.733584079891443
+      "ms": 8.47370782867074
     },
     {
       "text": "takımı sen batırdın, senin gibi adamlar bu oyunun yüz karası",
       "shown": "🔒 message hidden by moderation",
       "p_off": 0.9609972238540649,
       "offensive": true,
-      "ms": 14.266625046730042
+      "ms": 13.519958592951298
     }
   ]
 }

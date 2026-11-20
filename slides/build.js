@@ -302,7 +302,7 @@ pres.addSection({ title: "Development" });
       "SGD + momentum, backprop; best epoch on validation",
     ]],
     ["3", "Transformer", C.accent1, [
-      "BERTurk (dbmdz/bert-base-turkish-cased, 110M parameters)",
+      `BERTurk (dbmdz/bert-base-turkish-cased), ${(D.bert_params / 1e6).toFixed(1)}M parameters, 12 layers`,
       "Classification head on [CLS], max 96 WordPiece tokens",
       "AdamW 2e-5, batch 32, 3 epochs, warm-up 6%; Apple M2 GPU (MPS)",
       `Best epoch on validation; threshold ${th("berturk")}`,
@@ -316,12 +316,12 @@ pres.addSection({ title: "Development" });
   ];
   cards.forEach(([n, h, col, items], i) => {
     const x = 0.6 + i * 3.08;
-    card(s, x, 1.85, 2.88, 4.85);
+    card(s, x, 1.85, 2.88, 4.55);
     badge(s, x + 0.2, 2.05, n, col);
     text(s, h, { x: x + 0.85, y: 2.08, w: 1.95, h: 0.5, fontSize: 15, bold: true, valign: "middle" });
     text(s, items.map((t, j) => ({ text: t, options: { bullet: true, breakLine: j < items.length - 1 } })), { x: x + 0.2, y: 2.8, w: 2.55, h: 3.8, fontSize: 12, color: C.text2, paraSpaceAfter: 8 });
   });
-  text(s, "Every model outputs P(offensive); its decision threshold is tuned on the validation set (best macro-F1). The test set is never used for tuning.", { x: 0.6, y: 6.75, w: 12.1, h: 0.3, fontSize: 11, color: C.accent5 });
+  text(s, "Every model outputs P(offensive); its decision threshold is tuned on the validation set (best macro-F1). The test set is never used for tuning.", { x: 0.6, y: 6.6, w: 12.1, h: 0.3, fontSize: 11, color: C.accent5 });
 }
 
 // =====================================================================
