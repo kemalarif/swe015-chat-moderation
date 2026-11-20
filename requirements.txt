@@ -1,0 +1,12 @@
+# tested with Python 3.12 on macOS (Apple M2); versions pinned to the ones used for the reported results
+torch==2.15.0
+transformers==4.57.6
+onnx==1.23.2
+onnxruntime==1.32.0
+onnxscript==0.7.2
+scikit-learn==1.9.1
+gensim==4.4.0
+numpy==2.2.6
+pandas==3.1.1
+gradio==6.17.3
+huggingface_hub==0.36.2

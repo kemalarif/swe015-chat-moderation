@@ -1,0 +1,31 @@
+=== device=mps train=28580 val=3176 epochs=3 bs=32 lr=2e-05 steps=2682
+ep1 step 100/894 loss=0.5719 elapsed=1.5m eta=40.0m
+ep1 step 200/894 loss=0.4061 elapsed=3.8m eta=47.3m
+ep1 step 300/894 loss=0.3227 elapsed=6.2m eta=49.4m
+ep1 step 400/894 loss=0.3257 elapsed=8.8m eta=50.1m
+ep1 step 500/894 loss=0.2912 elapsed=11.4m eta=49.8m
+ep1 step 600/894 loss=0.2838 elapsed=14.3m eta=49.7m
+ep1 step 700/894 loss=0.2861 elapsed=17.3m eta=48.9m
+ep1 step 800/894 loss=0.2783 elapsed=20.1m eta=47.4m
+ep1 VAL macro-F1@0.5=0.8299  best-thr=0.38 macro-F1=0.8379
+  saved -> /Users/kemalarif/Desktop/LLM/artifacts/berturk-offenseval
+ep2 step 100/894 loss=0.2016 elapsed=26.1m eta=44.3m
+ep2 step 200/894 loss=0.2265 elapsed=28.7m eta=41.6m
+ep2 step 300/894 loss=0.2125 elapsed=31.3m eta=39.0m
+ep2 step 400/894 loss=0.1893 elapsed=34.2m eta=36.7m
+ep2 step 500/894 loss=0.2086 elapsed=37.0m eta=34.1m
+ep2 step 600/894 loss=0.2062 elapsed=39.8m eta=31.7m
+ep2 step 700/894 loss=0.2059 elapsed=42.6m eta=29.1m
+ep2 step 800/894 loss=0.2195 elapsed=45.2m eta=26.4m
+ep2 VAL macro-F1@0.5=0.8345  best-thr=0.42 macro-F1=0.8392
+  saved -> /Users/kemalarif/Desktop/LLM/artifacts/berturk-offenseval
+ep3 step 100/894 loss=0.1377 elapsed=51.1m eta=21.5m
+ep3 step 200/894 loss=0.1245 elapsed=53.4m eta=18.6m
+ep3 step 300/894 loss=0.1369 elapsed=55.7m eta=15.8m
+ep3 step 400/894 loss=0.1464 elapsed=57.9m eta=13.1m
+ep3 step 500/894 loss=0.1323 elapsed=60.0m eta=10.3m
+ep3 step 600/894 loss=0.1232 elapsed=62.2m eta=7.7m
+ep3 step 700/894 loss=0.1367 elapsed=64.2m eta=5.0m
+ep3 step 800/894 loss=0.1327 elapsed=66.3m eta=2.4m
+ep3 VAL macro-F1@0.5=0.8273  best-thr=0.60 macro-F1=0.8372
+done in 68.9 min, best val macro-F1=0.8392

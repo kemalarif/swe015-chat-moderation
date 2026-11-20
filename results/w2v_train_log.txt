@@ -1,0 +1,52 @@
+word2vec: vocab=28630 dim=200 (10s)
+  most similar to 'salak': ['cidden', 'komik', 'girmeyelim', 'muyum', 'icimden', 'sacma']
+  most similar to 'aptal': ['neyi', 'gercegi', 'cesaret', 'gormeniz', 'egolu', 'iddaa']
+  most similar to 'guzel': ['harika', 'keyifli', 'dolu', 'hos', 'oyuncagi', 'muhtesem']
+  most similar to 'erdogan': ['tayyip', 'recep', 'cumhurbaskani', 'hdp', 'baskani', 'rte']
+  [w2v_ffn] ep 1 train-loss=0.4597 val macro-F1=0.6408 thr=0.30
+  [w2v_ffn] ep 2 train-loss=0.4501 val macro-F1=0.6517 thr=0.30
+  [w2v_ffn] ep 3 train-loss=0.4466 val macro-F1=0.6414 thr=0.18
+  [w2v_ffn] ep 4 train-loss=0.4456 val macro-F1=0.6545 thr=0.26
+  [w2v_ffn] ep 5 train-loss=0.4405 val macro-F1=0.6480 thr=0.26
+  [w2v_ffn] ep 6 train-loss=0.4396 val macro-F1=0.6532 thr=0.30
+  [w2v_ffn] ep 7 train-loss=0.4383 val macro-F1=0.6562 thr=0.31
+  [w2v_ffn] ep 8 train-loss=0.4367 val macro-F1=0.6540 thr=0.30
+  [w2v_ffn] ep 9 train-loss=0.4351 val macro-F1=0.6563 thr=0.26
+  [w2v_ffn] ep10 train-loss=0.4334 val macro-F1=0.6605 thr=0.26
+  [w2v_ffn] ep11 train-loss=0.4301 val macro-F1=0.6665 thr=0.36
+  [w2v_ffn] ep12 train-loss=0.4286 val macro-F1=0.6616 thr=0.23
+  [w2v_ffn] ep13 train-loss=0.4275 val macro-F1=0.6615 thr=0.23
+  [w2v_ffn] ep14 train-loss=0.4264 val macro-F1=0.6597 thr=0.32
+  [w2v_ffn] ep15 train-loss=0.4239 val macro-F1=0.6631 thr=0.31
+  [w2v_ffn] ep16 train-loss=0.4233 val macro-F1=0.6673 thr=0.27
+  [w2v_ffn] ep17 train-loss=0.4216 val macro-F1=0.6605 thr=0.29
+  [w2v_ffn] ep18 train-loss=0.4200 val macro-F1=0.6605 thr=0.31
+  [w2v_ffn] ep19 train-loss=0.4167 val macro-F1=0.6671 thr=0.30
+  [w2v_ffn] ep20 train-loss=0.4147 val macro-F1=0.6656 thr=0.39
+  [w2v_ffn] ep21 train-loss=0.4141 val macro-F1=0.6700 thr=0.33
+  [w2v_ffn] ep22 train-loss=0.4134 val macro-F1=0.6674 thr=0.31
+  [w2v_ffn] ep23 train-loss=0.4113 val macro-F1=0.6695 thr=0.30
+  [w2v_ffn] ep24 train-loss=0.4089 val macro-F1=0.6695 thr=0.32
+  [w2v_ffn] ep25 train-loss=0.4084 val macro-F1=0.6707 thr=0.32
+  [w2v_ffn] ep26 train-loss=0.4078 val macro-F1=0.6698 thr=0.31
+  [w2v_ffn] ep27 train-loss=0.4055 val macro-F1=0.6709 thr=0.32
+  [w2v_ffn] ep28 train-loss=0.4056 val macro-F1=0.6731 thr=0.31
+  [w2v_ffn] ep29 train-loss=0.4051 val macro-F1=0.6709 thr=0.32
+  [w2v_ffn] ep30 train-loss=0.4073 val macro-F1=0.6727 thr=0.31
+w2v_ffn: best val macro-F1=0.6731 thr=0.31 (67s)
+  [w2v_cnn] ep 1 train-loss=0.5045 val macro-F1=0.6511 thr=0.33
+  [w2v_cnn] ep 2 train-loss=0.4534 val macro-F1=0.6573 thr=0.28
+  [w2v_cnn] ep 3 train-loss=0.4373 val macro-F1=0.6443 thr=0.18
+  [w2v_cnn] ep 4 train-loss=0.4274 val macro-F1=0.6840 thr=0.29
+  [w2v_cnn] ep 5 train-loss=0.4206 val macro-F1=0.6752 thr=0.30
+  [w2v_cnn] ep 6 train-loss=0.4102 val macro-F1=0.6709 thr=0.30
+  [w2v_cnn] ep 7 train-loss=0.4053 val macro-F1=0.6801 thr=0.24
+  [w2v_cnn] ep 8 train-loss=0.3967 val macro-F1=0.6749 thr=0.28
+  [w2v_cnn] ep 9 train-loss=0.3892 val macro-F1=0.6836 thr=0.28
+  [w2v_cnn] ep10 train-loss=0.3807 val macro-F1=0.6813 thr=0.32
+  [w2v_cnn] ep11 train-loss=0.3716 val macro-F1=0.6814 thr=0.31
+  [w2v_cnn] ep12 train-loss=0.3626 val macro-F1=0.6833 thr=0.34
+  [w2v_cnn] ep13 train-loss=0.3543 val macro-F1=0.6816 thr=0.32
+  [w2v_cnn] ep14 train-loss=0.3485 val macro-F1=0.6841 thr=0.39
+  [w2v_cnn] ep15 train-loss=0.3457 val macro-F1=0.6838 thr=0.36
+w2v_cnn: best val macro-F1=0.6841 thr=0.39 (1906s)

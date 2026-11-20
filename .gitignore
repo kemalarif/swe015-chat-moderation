@@ -1,0 +1,21 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.gradio/
+
+# data and model weights (downloaded / hosted on the Hugging Face Hub, never committed)
+data/
+artifacts/
+
+# course material
+SWE015_Homework_*.pdf
+
+# raw training stdout (the cleaned logs stay in results/)
+results/*_stdout.txt
+
+# slide build tooling
+slides/node_modules/
+slides/package-lock.json
+.claude/

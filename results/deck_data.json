@@ -1,0 +1,415 @@
+{
+  "results": [
+    {
+      "model": "Lexicon + edit distance (rules)",
+      "key": "lexicon",
+      "precision": "-",
+      "macro_F1": 0.6723892698924634,
+      "accuracy": 0.8140589569160998,
+      "OFF_precision": 0.5609756097560976,
+      "OFF_recall": 0.3854748603351955,
+      "OFF_F1": 0.45695364238410596,
+      "size_MB": 0.0007925033569335938,
+      "latency_ms_mean": 1.8076962558552623,
+      "latency_ms_p95": 4.316591355018317,
+      "meets_budget": true,
+      "threshold": 0.5
+    },
+    {
+      "model": "tf-idf + logistic regression",
+      "key": "tfidf",
+      "precision": "FP64",
+      "macro_F1": 0.7751477701246742,
+      "accuracy": 0.8613945578231292,
+      "OFF_precision": 0.6810207336523126,
+      "OFF_recall": 0.5963687150837989,
+      "OFF_F1": 0.6358897989575577,
+      "size_MB": 4.835735321044922,
+      "latency_ms_mean": 0.6359931244514883,
+      "latency_ms_p95": 0.8173252688720822,
+      "meets_budget": true,
+      "threshold": 0.58
+    },
+    {
+      "model": "word2vec + feed-forward net",
+      "key": "w2v_ffn",
+      "precision": "FP32",
+      "macro_F1": 0.6593950862732597,
+      "accuracy": 0.7840136054421769,
+      "OFF_precision": 0.46607669616519176,
+      "OFF_recall": 0.441340782122905,
+      "OFF_F1": 0.4533715925394548,
+      "size_MB": 22.60628604888916,
+      "latency_ms_mean": 0.09551206370815635,
+      "latency_ms_p95": 0.14887682627886534,
+      "meets_budget": true,
+      "threshold": 0.30999999999999994
+    },
+    {
+      "model": "word2vec + 1D CNN",
+      "key": "w2v_cnn",
+      "precision": "FP32",
+      "macro_F1": 0.6568430281571405,
+      "accuracy": 0.8160430839002267,
+      "OFF_precision": 0.5819070904645477,
+      "OFF_recall": 0.3324022346368715,
+      "OFF_F1": 0.4231111111111111,
+      "size_MB": 23.292244911193848,
+      "latency_ms_mean": 0.20317841321229935,
+      "latency_ms_p95": 0.2862540539354086,
+      "meets_budget": true,
+      "threshold": 0.38999999999999996
+    },
+    {
+      "model": "BERTurk fine-tuned (PyTorch)",
+      "key": "berturk",
+      "precision": "FP32",
+      "macro_F1": 0.815946836542563,
+      "accuracy": 0.8857709750566893,
+      "OFF_precision": 0.7449139280125195,
+      "OFF_recall": 0.664804469273743,
+      "OFF_F1": 0.7025830258302583,
+      "size_MB": 422.05253314971924,
+      "latency_ms_mean": 30.18225335981697,
+      "latency_ms_p95": 37.76895822957157,
+      "meets_budget": true,
+      "threshold": 0.41999999999999993
+    },
+    {
+      "model": "BERTurk + dynamic INT8 (PyTorch)",
+      "key": "berturk_int8_torch",
+      "precision": "INT8 Linear (qnnpack)",
+      "macro_F1": 0.8166268883697687,
+      "accuracy": 0.8883219954648526,
+      "OFF_precision": 0.7656765676567657,
+      "OFF_recall": 0.6480446927374302,
+      "OFF_F1": 0.7019667170953101,
+      "size_MB": 177.41412830352783,
+      "latency_ms_mean": 66.04527186602354,
+      "latency_ms_p95": 139.0395414084196,
+      "meets_budget": false,
+      "threshold": 0.41999999999999993
+    },
+    {
+      "model": "BERTurk FP32 (ONNX Runtime)",
+      "key": "berturk_onnx_fp32",
+      "precision": "FP32",
+      "macro_F1": 0.815946836542563,
+      "accuracy": 0.8857709750566893,
+      "OFF_precision": 0.7449139280125195,
+      "OFF_recall": 0.664804469273743,
+      "OFF_F1": 0.7025830258302583,
+      "size_MB": 422.1781520843506,
+      "latency_ms_mean": 63.51935062557459,
+      "latency_ms_p95": 133.3347901701926,
+      "meets_budget": false,
+      "threshold": 0.41999999999999993
+    },
+    {
+      "model": "BERTurk INT8 (ONNX Runtime)",
+      "key": "berturk_onnx_int8",
+      "precision": "INT8 MatMul (per-channel)",
+      "macro_F1": 0.8142664234441259,
+      "accuracy": 0.8866213151927438,
+      "OFF_precision": 0.759016393442623,
+      "OFF_recall": 0.6466480446927374,
+      "OFF_F1": 0.698340874811463,
+      "size_MB": 106.61608028411865,
+      "latency_ms_mean": 21.73439687816426,
+      "latency_ms_p95": 46.10129375942049,
+      "meets_budget": true,
+      "threshold": 0.41999999999999993
+    }
+  ],
+  "n_quantized_linear": 74,
+  "onnx_int8_ops": {
+    "MatMulInteger": 74,
+    "DynamicQuantizeLinear": 50,
+    "Gather": 31,
+    "MatMul": 24,
+    "DequantizeLinear": 3
+  },
+  "lexicon_size": 91,
+  "split_sizes": {
+    "train": 28580,
+    "val": 3176,
+    "test": 3528
+  },
+  "split_off_rate": {
+    "train": 0.19307207837648704,
+    "val": 0.19301007556675062,
+    "test": 0.20294784580498867
+  },
+  "hardware": "Apple M2, Darwin arm64, PyTorch 2.15.0, ONNX Runtime 1.32.0",
+  "agreement": "Label agreement with the FP32 BERTurk on the test set: BERTurk + dynamic INT8 (PyTorch) vs FP32 PyTorch: 98.78% same labels; BERTurk FP32 (ONNX Runtime) vs FP32 PyTorch: 100.00% same labels; BERTurk INT8 (ONNX Runtime) vs FP32 PyTorch: 98.84% same labels",
+  "budget_ms": 50.0,
+  "n_test": 3528,
+  "off_rate_test": 0.20294784580498867,
+  "normalization": [
+    {
+      "raw": "@USER Sen tam bir GERİZEKALISIN!!! https://t.co/x",
+      "light": "@user Sen tam bir GERİZEKALISIN!!! url",
+      "full": "user sen tam bir gerizekalisin url"
+    },
+    {
+      "raw": "s1kt1r g1t b u r a d a n",
+      "light": "siktir git buradan",
+      "full": "siktir git buradan"
+    },
+    {
+      "raw": "çoooook güzelll olmuşşş 👏",
+      "light": "çok güzel olmuş 👏",
+      "full": "cok guzel olmus"
+    },
+    {
+      "raw": "@pt@l mısın sen",
+      "light": "aptal mısın sen",
+      "full": "aptal misin sen"
+    }
+  ],
+  "false_negatives": [
+    {
+      "text": "O günler geçti canımıniçi, bir daha karşılaşmamak dileğiyle",
+      "y": 1,
+      "p_int8": 0.0024,
+      "p_tfidf": 0.0405
+    },
+    {
+      "text": "Sipammmmm yaa    Geldi hem laptopu aldı    Hem de beni esir aldı 😂😂",
+      "y": 1,
+      "p_int8": 0.0063,
+      "p_tfidf": 0.1105
+    },
+    {
+      "text": "Ay ben yine samimiyetsiz saatlerime geldim en iyisi yatmak",
+      "y": 1,
+      "p_int8": 0.0066,
+      "p_tfidf": 0.1013
+    },
+    {
+      "text": "Dünyaca ünlü Biyoloji öğretmeni Tuğçe Karaduman topuklu ayakkabılarıyla metroda.",
+      "y": 1,
+      "p_int8": 0.007,
+      "p_tfidf": 0.2531
+    },
+    {
+      "text": "@USER Kamil koçtan aldığım otobüs bileti 2 kere iptal olunca ettiğim küfürler yerini buluyo galiba xksmcmwmcö",
+      "y": 1,
+      "p_int8": 0.0078,
+      "p_tfidf": 0.205
+    },
+    {
+      "text": "anlık seni istemiyorum isimli wp kitabı okuyorum kusmama ramak kaldı",
+      "y": 1,
+      "p_int8": 0.0078,
+      "p_tfidf": 0.0285
+    },
+    {
+      "text": "O işler işte öyle olmuyor  #TarihSiziAffetmeyecek",
+      "y": 1,
+      "p_int8": 0.008,
+      "p_tfidf": 0.197
+    },
+    {
+      "text": "Dün Maçka'da öpüşürken bir grup keko videomuzu çekti. Acaba yayınlarla mı?",
+      "y": 1,
+      "p_int8": 0.0084,
+      "p_tfidf": 0.2059
+    },
+    {
+      "text": "Eski sevgilimi Tinder’da göremem çünkü hornet kullanıyor. Djjdxj keşke şaka olsaydi:(",
+      "y": 1,
+      "p_int8": 0.0089,
+      "p_tfidf": 0.1283
+    },
+    {
+      "text": "Bazı insanlara bazı şeyleri anlatamazsın.   Bırakın zifiri karanlıkta kalsınlar...",
+      "y": 1,
+      "p_int8": 0.0096,
+      "p_tfidf": 0.2587
+    },
+    {
+      "text": "basit insanların açtığı saçma salak hasarlar",
+      "y": 1,
+      "p_int8": 0.01,
+      "p_tfidf": 0.9251
+    },
+    {
+      "text": "Vay anasını ne büyük dertler hsgauahajhaqi",
+      "y": 1,
+      "p_int8": 0.0101,
+      "p_tfidf": 0.5275
+    }
+  ],
+  "false_positives": [
+    {
+      "text": "@USER Eric Cantona da gelirmi ama sikolsu çok isterim.",
+      "y": 0,
+      "p_int8": 0.9714,
+      "p_tfidf": 0.2393
+    },
+    {
+      "text": "1. Sınıftayken 4 hafta devamsızlığı burda bitiremem diyordum aqsdf yüzümü okulda yıkamaya başladım aqsdf",
+      "y": 0,
+      "p_int8": 0.9697,
+      "p_tfidf": 0.2268
+    },
+    {
+      "text": "Az önce ablam bişey sordu he dedim yeğenim (2) he yok evet var edepsiz dedi folikasit çocuğu seni",
+      "y": 0,
+      "p_int8": 0.9697,
+      "p_tfidf": 0.3676
+    },
+    {
+      "text": "Çok dertlisin aqam noldu sana?   Ağlayıp, o güldüğü fotoğraflarına bakıyordum yine)",
+      "y": 0,
+      "p_int8": 0.9566,
+      "p_tfidf": 0.4435
+    },
+    {
+      "text": "@USER Yaramaz çocuk gibiler gözünü ayırma ayarı yok ya la bunların.",
+      "y": 0,
+      "p_int8": 0.9562,
+      "p_tfidf": 0.9314
+    },
+    {
+      "text": "İstifa diyen terbiyesizlik yapan bütün hesaplar bi gidin .! Saygısızlık etmeyin .",
+      "y": 0,
+      "p_int8": 0.9405,
+      "p_tfidf": 0.9929
+    },
+    {
+      "text": "@USER @USER Umarım istanbul il bş. na yaptığını size yapmaz...",
+      "y": 0,
+      "p_int8": 0.8818,
+      "p_tfidf": 0.2374
+    },
+    {
+      "text": "@USER @USER Bence kirasını versin sonuçta haram geçmez kursağından geçmeniş muammerde şahit olur",
+      "y": 0,
+      "p_int8": 0.8535,
+      "p_tfidf": 0.7032
+    },
+    {
+      "text": "Yorumları okuyun altı komple fetöcü övgü şöleni",
+      "y": 0,
+      "p_int8": 0.8429,
+      "p_tfidf": 0.3768
+    },
+    {
+      "text": "Salah ın yavaş yavaş  müslüman  yaptığı taraftarı  90 dakikada dinden imandan çıkardın  karius",
+      "y": 0,
+      "p_int8": 0.8346,
+      "p_tfidf": 0.9043
+    },
+    {
+      "text": "@USER Devletin eline nasıl yapışmış. Kemal dan bişey çıkmadı galiba",
+      "y": 0,
+      "p_int8": 0.8251,
+      "p_tfidf": 0.7772
+    },
+    {
+      "text": "Çaya siyanür katmışlar.      Kininizi son hafta oynayacağız Trabzona saklayın , biz çok üzeriz sizi.",
+      "y": 0,
+      "p_int8": 0.8095,
+      "p_tfidf": 0.1615
+    }
+  ],
+  "bert_wins": [
+    {
+      "text": "Cok basit bir numaraydı bu, beni mi hafife aldın yoksa zekan mı elvermedi",
+      "y": 1,
+      "p_int8": 0.5991,
+      "p_tfidf": 0.1308
+    },
+    {
+      "text": "İkinci şansları sikeyim, insanlar asla değişmez.    -Thomas Shelby",
+      "y": 1,
+      "p_int8": 0.9788,
+      "p_tfidf": 0.2256
+    },
+    {
+      "text": "GÖREMİYORUM ORUSPU ÇOCUĞU KELEBEĞİ GÖREMİYORUM BİN KERE DENEDİM KAFAYI YİCEM",
+      "y": 1,
+      "p_int8": 0.5698,
+      "p_tfidf": 0.4991
+    },
+    {
+      "text": "Arkadaslar beşiktaşta olan yokmu aw vizyonsuz gevşek biri olursa seviniriz bye",
+      "y": 1,
+      "p_int8": 0.9719,
+      "p_tfidf": 0.5258
+    },
+    {
+      "text": "@USER Ohhhhhhhhhh iyi oldu çakma kabadayıya",
+      "y": 1,
+      "p_int8": 0.9507,
+      "p_tfidf": 0.3629
+    },
+    {
+      "text": "Yokmu sizin kapatma düğmeniz falan çok sıkıldım sizden.",
+      "y": 1,
+      "p_int8": 0.475,
+      "p_tfidf": 0.4608
+    },
+    {
+      "text": "@USER Biraz cahilce üstün körü bi tespit olmuş bu",
+      "y": 1,
+      "p_int8": 0.5397,
+      "p_tfidf": 0.3754
+    },
+    {
+      "text": "@USER Ona rağmen göt zoruyla şampiyon oldular panik yapmayın lig her zaman ikinci yarı başlar Mezopotamyada.",
+      "y": 1,
+      "p_int8": 0.9825,
+      "p_tfidf": 0.0794
+    },
+    {
+      "text": "dikkat edin hala itlik kelimesini kullanmadım demiyor #basİTLİKmiş   #ValiBey",
+      "y": 1,
+      "p_int8": 0.9004,
+      "p_tfidf": 0.3846
+    },
+    {
+      "text": "@USER Terbiyezsiz. Net. Velet ne demek. Maganda diyorum da boşuna değil . Bora yı bir uyarın. #survivor2019",
+      "y": 1,
+      "p_int8": 0.8988,
+      "p_tfidf": 0.1565
+    },
+    {
+      "text": "Çünkü cemaat mansublarının çoğu iyice kafayı yedi",
+      "y": 1,
+      "p_int8": 0.6489,
+      "p_tfidf": 0.3254
+    },
+    {
+      "text": "@USER Harika vücudun var dilimi her tarafında gezdirmeyi çok isterim izin verirmisin",
+      "y": 1,
+      "p_int8": 0.6029,
+      "p_tfidf": 0.2391
+    }
+  ],
+  "demo": [
+    {
+      "text": "iyi oyundu arkadaşlar, bir el daha atalım mı?",
+      "shown": "iyi oyundu arkadaşlar, bir el daha atalım mı?",
+      "p_off": 0.005636502522975206,
+      "offensive": false,
+      "ms": 11.861291714012623
+    },
+    {
+      "text": "s1kt1r g1t buradan ezik",
+      "shown": "s***** g1t buradan e***",
+      "p_off": 0.9878268837928772,
+      "offensive": true,
+      "ms": 8.733584079891443
+    },
+    {
+      "text": "takımı sen batırdın, senin gibi adamlar bu oyunun yüz karası",
+      "shown": "🔒 message hidden by moderation",
+      "p_off": 0.9609972238540649,
+      "offensive": true,
+      "ms": 14.266625046730042
+    }
+  ]
+}
