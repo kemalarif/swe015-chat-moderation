@@ -5,6 +5,7 @@ CPU-only server. This repository trains four models of increasing sophistication
 on the **same held-out test set** (the official OffensEval-TR 2020 test set), and serves the
 **INT8-quantized BERTurk (ONNX Runtime)** in a live chat app built with Gradio.
 
+- Demo video (2 min): https://youtu.be/4Dp4R-h09vg
 - Model weights: https://huggingface.co/kemalarif/berturk-offenseval-tr (downloaded automatically)
 - Author: Kemal Arif Karabacıoğlu (220911802)
 
